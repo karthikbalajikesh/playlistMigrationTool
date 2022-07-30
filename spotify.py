@@ -4,9 +4,9 @@ from configuration import Configuration
 
 class SpotifyClient:
     def __init__(self, config:Configuration) -> None:
-        self.clientId = config.clientId
-        self.clientSecret = config.clientSecret
-        self.username = config.username
+        self.clientId = config.spotifyClientId
+        self.clientSecret = config.spotifyClientSecret
+        self.username = config.spotifyUsername
         self.config = config
         self.token = sp.request_client_token(self.clientId, self.clientSecret)
         self.spotify = sp.Spotify(self.token)

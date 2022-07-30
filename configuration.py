@@ -8,14 +8,15 @@ class Configuration:
         # load the variables
         load_dotenv()
 
-        self.clientId = os.getenv("clientId")
-        self.clientSecret = os.getenv("clientSecret")
-        self.username = os.getenv("userName")
+        self.spotifyClientId = os.getenv("SpotifyClientId")
+        self.spotifyClientSecret = os.getenv("SpotifyClientSecret")
+        self.spotifyUsername = os.getenv("SpotifyUserName")
+        self.youtubeApiKey = os.getenv("YoutubeApiKey")
         self.hasFilter = configs['filter']
         self.playlistsToFilter = configs['playlistsToFilter']
-
-        print(self.playlistsToFilter)
-
+        self.baseYoutubeSearch = configs['baseYoutubeSearch']
+        
+        
 # Test code
 if __name__ == '__main__' :
     configs = Configuration()

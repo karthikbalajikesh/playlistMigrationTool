@@ -6,4 +6,8 @@ filter = false
 
 # Enter a list of playlists that you would like to port
 playlistsToFilter = ["Vibe","Drive"]
+
+
+######### YOUTUBE #################3
+baseYoutubeSearch="https://www.youtube.com/results?search_query="
 testValue = "hello World"
