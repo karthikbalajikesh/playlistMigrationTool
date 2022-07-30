@@ -15,6 +15,9 @@ class SpotifyClient:
 
 
     def getPlaylistNames(self) ->list :
+        '''
+        Function gets the list of playlists for the username provided in the configs
+        '''
         playlists = self.spotify.playlists(user_id=self.username)
         result = []
         for playlist in playlists.items:
@@ -23,6 +26,9 @@ class SpotifyClient:
         return result
 
     def getPlaylistNamesWithIds(self) ->dict :
+        '''
+        Function gives the map between every playlist with their hash ids
+        '''
         playlists = self.spotify.playlists(user_id=self.username)
         result = {}
         for playlist in playlists.items:
@@ -31,6 +37,9 @@ class SpotifyClient:
         return result
 
     def getSongsForPlaylist(self, playlistName:str) -> 'list[Song]':
+        '''
+        Gets a list of songs for a playlist queried
+        '''
         result = []
         playlistsWithIds = self.getPlaylistNamesWithIds()
         if not playlistName in playlistsWithIds:
