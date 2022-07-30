@@ -1,3 +1,9 @@
 # This file contains the configuration for the package
+redirectUrl = "http://localhost:5000"
 
+# Should we filter specific playlists?
+filter = false
+
+# Enter a list of playlists that you would like to port
+playlistsToFilter = ["Vibe","Drive"]
 testValue = "hello World"
