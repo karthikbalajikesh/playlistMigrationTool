@@ -15,6 +15,8 @@ class Configuration:
         self.hasFilter = configs['filter']
         self.playlistsToFilter = configs['playlistsToFilter']
         self.baseYoutubeSearch = configs['baseYoutubeSearch']
+
+        # TODO error handling for missing keys
         
         
 # Test code
