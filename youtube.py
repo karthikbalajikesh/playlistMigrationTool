@@ -51,7 +51,7 @@ class YoutubeSearch:
             videoId = searchResponse['items'][resultNum]['id']['videoId']
             viewCountInMill = self.getViewCountForSongid(videoId)//1000000
             gotResult = True
-            print("The video {videoLink} has less than {min} million views.".format(videoLink=self.baseYoutubeVideoLink + videoId, min= self.minViewsInMillions))
+            
             if(viewCountInMill < self.minViewsInMillions):
                 print("The video {videoLink} has less than {min} million views.".format(videoLink=self.baseYoutubeVideoLink + videoId, min= self.minViewsInMillions))
                 entry = int(input("Press 1 to add to the playlist anyways. Else press 0"))    
