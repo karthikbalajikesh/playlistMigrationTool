@@ -46,15 +46,16 @@ class YoutubeSearch:
         resultNum = 0
         gotResult = False
         searchResponse = self.searchMostRelevantSong(song=song)
-
+        
         while(not gotResult):
+            
             videoId = searchResponse['items'][resultNum]['id']['videoId']
+
             viewCountInMill = self.getViewCountForSongid(videoId)//1000000
-            gotResult = True
             
             if(viewCountInMill < self.minViewsInMillions):
                 print("The video {videoLink} has less than {min} million views.".format(videoLink=self.baseYoutubeVideoLink + videoId, min= self.minViewsInMillions))
-                entry = int(input("Press 1 to add to the playlist anyways. Else press 0"))    
+                entry = int(input("Press 1 to add to the playlist anyways. Else press 0:      "))    
                 if (entry == 1) :
                     gotResult = True # just for readability
                     return videoId
@@ -80,7 +81,7 @@ if __name__ == '__main__':
     configs = Configuration()
     youtube = YoutubeSearch(configs)
 
-    song = Song("Numb","Linkin Park")
+    song = Song("Never Been in Love","Hayley")
     print(youtube.getVideoIdForSong(song))
 
 
