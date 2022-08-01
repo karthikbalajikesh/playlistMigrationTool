@@ -9,5 +9,7 @@ playlistsToFilter = ["Vibe","Drive"]
 
 
 ######### YOUTUBE #################3
-baseYoutubeSearch="https://www.youtube.com/results?search_query="
-testValue = "hello World"
+baseYoutubeSearch = "https://www.youtube.com/results?search_query="
+baseYoutubeVideoLink = "https://www.youtube.com/watch?v="
+youtubeMaxEntriesInSearch = 5 
+youtubeMinViewsThresholdMills = 1 

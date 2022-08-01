@@ -1,3 +1,4 @@
+from distutils.command.config import config
 from dotenv import load_dotenv
 import toml
 import os
@@ -15,7 +16,12 @@ class Configuration:
         self.hasFilter = configs['filter']
         self.playlistsToFilter = configs['playlistsToFilter']
         self.baseYoutubeSearch = configs['baseYoutubeSearch']
-
+        self.googleClientId = os.getenv("GoogleClientId")
+        self.googleClientSecret = os.getenv("GoogleClientSecret")
+        self.googleClientSecretFile = os.getenv("GoogleClientSecretFile")
+        self.baseYoutubeVideoLink = configs['baseYoutubeVideoLink']
+        self.youtubeMaxSearchEntries = int(configs['youtubeMaxEntriesInSearch'])
+        self.youtubeMinViewsThresholdMills = int(configs['youtubeMinViewsThresholdMills'])
         # TODO error handling for missing keys
         
         
